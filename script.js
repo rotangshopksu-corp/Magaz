@@ -87,7 +87,7 @@ document.querySelectorAll(".js-secret-admin").forEach(logo => {
     try { state = JSON.parse(sessionStorage.getItem(key) || "null"); } catch { state = null; }
     const count = state && now - state.time < 10000 ? state.count + 1 : 1;
     sessionStorage.setItem(key, JSON.stringify({ count, time: now }));
-    if (count >= 12) {
+    if (count >= 5) {
       event.preventDefault();
       sessionStorage.removeItem(key);
       location.href = "admin.html";
