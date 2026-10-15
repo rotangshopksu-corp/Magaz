@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KsuШик — Кошики з ротанга</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo js-secret-admin" href="index.html">KsuШик</a>
+
+    <nav class="nav">
+      <a href="index.html">Головна</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero__content">
+      <p class="hero__label">Ручна робота</p>
+      <h1>Кашпо з ротанга для дому та саду</h1>
+      <p class="hero__text">
+        Сучасні кашпо ручної роботи — для квітів, декору та подарунків.
+      </p>
+      <a class="btn" href="catalog.html">Перейти до каталогу</a>
+    </div>
+  </section>
+
+  <!-- Категорії -->
+
+  <section class="section section--soft">
+    <div class="container">
+      <h2 class="section__title">Види кашпо</h2>
+
+      <div class="categories-grid" id="categories-grid">
+
+        <a href="catalog.html?category=5l-standard" class="category-card">
+          <img src="images/obrezan1.jpg" alt="Пухляш">
+          <h3>Пухляш</h3>
+        </a>
+
+        <a href="catalog.html?category=5l-vase" class="category-card">
+          <img src="images/obrezan2.jpg" alt="Горщик щастя">
+          <h3>Горщик щастя</h3>
+        </a>
+
+        <a href="catalog.html?category=10l-standard" class="category-card">
+          <img src="images/chobot.jpg" alt="Чобіт">
+          <h3>Чобіт</h3>
+        </a>
+
+        <a href="catalog.html?category=10l-vase" class="category-card">
+          <img src="images/coruto.jpg" alt="Балконне кашпо">
+          <h3>Балконне кашпо</h3>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Соцмережі -->
+
+  <section class="social-section">
+    <h2>Ми в соцмережах</h2>
+
+    <div class="social-links">
+      <a href="https://t.me/kashpoksu" target="_blank">
+        <img src="images/social/telegram.svg" alt="Telegram">
+      </a>
+
+      <a href="https://www.tiktok.com/@poliks.poliks?_r=1&_t=ZS-97OHponkhBS" target="_blank">
+        <img src="images/social/tiktok.svg" alt="TikTok">
+      </a>
+    </div>
+  </section>
+
+  <!-- Чому обирають нас -->
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Чому обирають нас</h2>
+
+      <div class="features">
+
+        <div class="feature-card">
+          <h3>Ручна робота</h3>
+          <p>Кожен кошик виготовлений акуратно та з любов'ю.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Сучасний стиль</h3>
+          <p>Підходить для інтер'єру, фотосесій та подарунків.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Зручне замовлення</h3>
+          <p>Натисніть кнопку та одразу побачите номер телефону для зв'язку.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 KsuШик</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="products.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

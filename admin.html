@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Адмін-панель — KsuШик</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">KsuШик</a>
+      <a class="admin-back" href="index.html">← До магазину</a>
+    </div>
+  </header>
+  <main class="section admin-page">
+    <div class="container">
+      <section id="login-panel" class="admin-panel admin-login">
+        <h1 class="page-title">Вхід до адмін-панелі</h1>
+        <p class="page-text">Введіть цифровий пароль адміністратора.</p>
+        <form id="login-form">
+          <label for="admin-pin">Пароль</label>
+          <input id="admin-pin" type="password" inputmode="numeric" pattern="[0-9]+" autocomplete="current-password" required>
+          <button class="btn" type="submit">Увійти</button>
+        </form>
+        <p id="login-message" class="admin-message" role="status"></p>
+      </section>
+
+      <section id="dashboard" hidden>
+        <div class="admin-heading">
+          <div><h1 class="page-title">Керування магазином</h1><p class="page-text">Категорії, товари та фото зберігаються у Supabase.</p></div>
+          <button id="logout-button" class="btn btn--secondary" type="button">Вийти</button>
+        </div>
+        <p id="admin-message" class="admin-message" role="status"></p>
+        <div class="admin-columns">
+          <section class="admin-panel">
+            <h2>Категорії</h2>
+            <form id="category-form" class="admin-form">
+              <input type="hidden" id="category-id">
+              <label for="category-name">Назва категорії</label>
+              <input id="category-name" type="text" maxlength="80" required placeholder="Наприклад, Кашпо для балкона">
+              <label for="category-image">Фото категорії (необов’язково)</label>
+              <input id="category-image" type="file" accept="image/jpeg,image/png,image/webp">
+              <div class="form-actions"><button class="btn" type="submit">Зберегти категорію</button><button class="btn btn--secondary" id="category-cancel" type="button" hidden>Скасувати</button></div>
+            </form>
+            <div id="category-list" class="admin-list"></div>
+          </section>
+
+          <section class="admin-panel">
+            <h2>Товари</h2>
+            <form id="product-form" class="admin-form">
+              <input type="hidden" id="product-id">
+              <label for="product-name">Назва товару</label>
+              <input id="product-name" type="text" maxlength="120" required placeholder="Наприклад, Пухляш">
+              <label for="product-category">Категорія</label>
+              <select id="product-category" required><option value="">Спочатку створіть категорію</option></select>
+              <label for="product-size">Розмір або об’єм</label>
+              <input id="product-size" type="text" maxlength="80" placeholder="5 л">
+              <label for="product-price">Ціна, грн</label>
+              <input id="product-price" type="number" min="0" step="1" required placeholder="500">
+              <label for="product-image">Фото товару</label>
+              <input id="product-image" type="file" accept="image/jpeg,image/png,image/webp">
+              <p id="current-image" class="current-image"></p>
+              <div class="form-actions"><button class="btn" type="submit">Зберегти товар</button><button class="btn btn--secondary" id="product-cancel" type="button" hidden>Скасувати</button></div>
+            </form>
+            <div id="product-list" class="admin-list"></div>
+          </section>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
